@@ -6,5 +6,5 @@
 
 <script setup>
 
-const { data} = $fetch('test/hello')
+const { data} = $fetch('http://localhost:8080/test/hello')
 </script>
