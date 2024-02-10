@@ -1,10 +1,5 @@
 <template>
-  <div>
-    {{ data }} 
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-
-<script setup>
-
-const { data} = $fetch('test/hello')
-</script>
