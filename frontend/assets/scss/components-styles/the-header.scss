@@ -1,6 +1,5 @@
 $primary: #0a0a0a;
 
-
 .header {
   background: $primary;
   display: flex;
@@ -11,12 +10,49 @@ $primary: #0a0a0a;
   box-sizing: border-box;
   .logo-wrapper {
     display: flex;
-    padding: 24px;
+    padding-block: 24px;
     justify-content: space-between;
     flex: 1;
     width: 50%;
     align-self: flex-end;
     box-sizing: border-box;
+    .logo {
+      /* H2 BN Bold 48 */
+      background: linear-gradient(
+        90deg,
+        rgb(183, 145, 51),
+        rgb(246, 195, 69),
+        rgb(255, 212, 84),
+        rgb(255, 213, 94),
+        rgb(255, 208, 72),
+        rgb(210, 171, 58),
+        rgb(191, 152, 36),
+        rgb(173, 134, 21),
+        rgb(169, 131, 22),
+        rgb(192, 144, 0),
+        rgb(242, 194, 50)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-family: Bona Nova;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 58px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    .menu {
+      /* H2 BN Bold 24 */
+      color: rgb(252, 252, 252);
+      font-family: Bona Nova;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
   }
   .navigation-wrapper {
     display: flex;
@@ -24,7 +60,15 @@ $primary: #0a0a0a;
     padding: 24px 48px;
     .nav-item {
       display: flex;
-      gap: 40px;
+      gap: 160px;
+      /* H2 BN Bold 24 */
+      color:rgb(183, 145, 51);
+      font-family: Bona Nova;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0.2px;
+      text-align: left;
     }
   }
 }

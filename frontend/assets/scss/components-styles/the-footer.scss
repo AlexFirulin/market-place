@@ -1,0 +1,44 @@
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 40px;
+  background: rgb(10, 10, 10);
+  .footer-top-info {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 32px 0;
+    .text {
+      /* H2 BN Bold 24 */
+color: rgb(183, 145, 51);
+font-family: Bona Nova;
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+    }
+  }
+  .useful-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: stretch;
+    .links-wrapper {
+      display: flex;
+      flex-basis: calc(33% - 10px);
+      flex-direction: column;
+      gap: 16px;
+      /* H2 BN Bold 24 */
+color: rgb(183, 145, 51);
+font-family: Bona Nova;
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0%;
+text-align: left;
+    }
+  }
+}

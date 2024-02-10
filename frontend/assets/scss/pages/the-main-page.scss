@@ -1,0 +1,39 @@
+.main-page {
+display: flex;
+flex-direction: column;
+padding: 80px 40px;
+  .main-legend{
+    display: flex;
+    background: rgb(10, 10, 10);
+    padding: 80px;
+    .legend-image {
+      position: relative;
+      max-width: 548px;
+      max-height: 480px;
+    }
+    .legend-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding:0 64px;
+      gap: 16px;
+      h2 {
+        /* H1 BN Bold 64 */
+background: linear-gradient(90.00deg, rgb(183, 145, 51),rgb(246, 195, 69),rgb(255, 212, 84),rgb(255, 213, 94),rgb(255, 208, 72),rgb(210, 171, 58),rgb(191, 152, 36),rgb(173, 134, 21),rgb(169, 131, 22),rgb(192, 144, 0),rgb(242, 194, 50));
+-webkit-background-clip:
+text;
+-webkit-text-fill-color:
+transparent;
+background-clip:text;
+text-fill-color:transparent;
+font-family: Bona Nova;
+font-size: 64px;
+font-weight: 700;
+line-height: 77px;
+letter-spacing: 0%;
+text-align: left;
+      }
+    }
+  }
+}
