@@ -2,10 +2,10 @@
 <header class="header">
   <div class="logo-wrapper">
   <div class="logo">
-    <img src="../assets/images/Logo.png" alt="">
+    <img src="/images/Logo.png" alt="">
   </div>
   <div class="menu">
-    <img src="../assets/images/button-login.png" alt="">
+    <img src="/images/button-login.png" alt="">
   </div>
 </div>
 <nav class="navigation-wrapper">
