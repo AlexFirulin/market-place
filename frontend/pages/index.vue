@@ -29,27 +29,52 @@
       </div>
       <div class="category-mid">
         <div v-for="item in midItems"
-             :key="item.name" class="small-mid-items">
-              <img :src="item.img" alt="/" class="img">
-              <p>{{ item.name }}</p>
-            </div>
+             :key="item.name"
+             class="small-mid-items">
+          <img :src="item.img"
+               alt="/"
+               class="img">
+          <p>{{ item.name }}</p>
+        </div>
       </div>
       <div class="category-bottom">
-        <div v-for="(item, index) in bottomItems" :key="item.name" class="bottom-item">
-          <div class="items" >
-            <img :src="item.img" alt="/" class="img" :class="{'black-box' : index === 0}">
-            <p>{{ item.name }}</p>
-            <div v-if="index === 0" class="bid-data">
-              <div>{{ item.date }}</div>
-              <div class="bid-cost">
-                <div> Ставок {{ item.bids }}</div>
-                <div>{{ item.price }}</div>
-              </div>
-
+        <div class="black-box">
+          <img src="/images/categories/photo19.png"
+               alt="black-box">
+          <div class="auction-name">Чорна скринька</div>
+          <div class="bid-data">
+            24.03.2025
+          </div>
+          <div class="bid-cost">
+            <div> Ставок 55</div>
+            <div> 3254 uah</div>
+          </div>
+        </div>
+        <div class="wrapper-small">
+          <div v-for="(item, index) in bottomItems.slice(0, 4)"
+               :key="index"
+               class="bottom-item">
+            <div class="items">
+              <img :src="item.img"
+                   alt="/"
+                   class="img">
+              <p>{{ item.name }}</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="end-item-wrapper">
+      <div v-for="(item, index) in bottomItems.slice(4)"
+           :key="index"
+           class="end-item">
+        <div class="items">
+          <img :src="item.img"
+               alt="/"
+               class="img">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
     </div>
   </main>
 </template>
@@ -108,14 +133,7 @@ const midItems = [
   }
 ]
 const bottomItems = [
-{
-    name: 'Туризм/відпочинок',
-    img: '/images/categories/photo19.png',
-    date:'25.4.2024',
-    bids: '32',
-    price: '3254'
-  },
-{
+  {
     name: 'Дитячі товари',
     img: '/images/categories/photo100.png'
   },
@@ -146,9 +164,7 @@ const bottomItems = [
   {
     name: 'Туризм/відпочинок',
     img: '/images/categories/photo18.png'
-  },
-
-
+  }
 ]
 </script>
 
