@@ -1,17 +1,20 @@
 <template>
 <header class="header">
   <div class="logo-wrapper">
-  <div class="logo">Logo/Name</div>
-  <div class="menu">Кабинет</div>
+  <div class="logo">
+    <img src="/images/Logo.png" alt="">
+  </div>
+  <div class="menu">
+    <img src="/images/button-login.png" alt="">
+  </div>
 </div>
 <nav class="navigation-wrapper">
   <ul class="nav-item">
-    <li>Пошук</li>
-    <li>Каталог</li>
-    <li>Продати</li>
-    <li>Аукціон</li>
-    <li>Аукціон на ЗСУ</li>
-    <li>Додадково</li>
+    <li><nuxt-link to="">Каталог</nuxt-link></li>
+    <li><nuxt-link to="">Пошук</nuxt-link></li>
+    <li><nuxt-link to="">Продати</nuxt-link></li>
+    <li><nuxt-link to="">Аукціон</nuxt-link></li>
+    <li><nuxt-link to="">Додадково</nuxt-link></li>
   </ul>
 </nav>
 </header>
