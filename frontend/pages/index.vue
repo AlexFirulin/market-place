@@ -134,36 +134,36 @@ const midItems = [
 ]
 const bottomItems = [
   {
-    name: 'Дитячі товари',
-    img: '/images/categories/photo100.png'
+    name: 'Кухонне приладдя',
+    img: '/images/categories/photo18.png'
   },
   {
-    name: 'Ювелірні вироби',
-    img: '/images/categories/photo101.png'
-  },
-  {
-    name: 'Колекціонерські предмети',
-    img: '/images/categories/photo13.png'
-  },
-  {
-    name: 'Природні матеріали',
-    img: '/images/categories/photo14.png'
-  },
-  {
-    name: 'Туризм/відпочинок',
-    img: '/images/categories/photo15.png'
-  },
-  {
-    name: 'Туризм/відпочинок',
-    img: '/images/categories/photo16.png'
-  },
-  {
-    name: 'Туризм/відпочинок',
+    name: 'Книги',
     img: '/images/categories/photo17.png'
   },
   {
-    name: 'Туризм/відпочинок',
-    img: '/images/categories/photo18.png'
+    name: 'Сад, дача та город',
+    img: '/images/categories/photo13.png'
+  },
+  {
+    name: 'Будівництво та ремонт',
+    img: '/images/categories/photo14.png'
+  },
+  {
+    name: 'Краса та здоров’я',
+    img: '/images/categories/photo15.png'
+  },
+  {
+    name: 'Спорт',
+    img: '/images/categories/photo16.png'
+  },
+  {
+    name: 'Побутова техніка',
+    img: '/images/categories/photo101.png'
+  },
+  {
+    name: 'Товари для бізнесу',
+    img: '/images/categories/photo100.png'
   }
 ]
 </script>

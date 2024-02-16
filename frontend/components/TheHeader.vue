@@ -2,10 +2,13 @@
 <header class="header">
   <div class="logo-wrapper">
   <div class="logo">
-    <img src="/images/Logo.png" alt="">
+    <img src="/images/Logo.png" alt="logo">
   </div>
   <div class="menu">
-    <img src="/images/button-login.png" alt="">
+    <nuxt-link to="/login">
+      <img src="/images/button-login.png" alt="logo">
+    </nuxt-link>
+    <div class="social-icons"></div>
   </div>
 </div>
 <nav class="navigation-wrapper">

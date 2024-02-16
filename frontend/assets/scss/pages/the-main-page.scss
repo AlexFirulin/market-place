@@ -187,6 +187,10 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
+        .img {
+          max-width: 268px;
+          max-height: 290px;
+        }
       }
     }
     }

@@ -1,26 +1,30 @@
 <template>
-  <footer class="footer-wrapper">
-    <div class="footer-top-info">
-      <div class="text">Назва компании</div>
-      <div class="text">Соц сети</div>
+  <footer>
+    <div class="footer-top">
+      <img src="/images/Logo.png" alt="logo">
+      <div class="social-icons">
+        <img src="/images/facebook.svg" alt="">
+        <img src="/images/telegram.png" alt="">
+        <img src="/images/instagram.svg" alt="">
+      </div>
     </div>
-    <nav class="useful-links">
-      <div class="links-wrapper items-start">
+    <div class="footer-mid">
+      <div class="col-1">
         <nuxt-link to="">Про компанію</nuxt-link>
         <nuxt-link to="">Часті питання</nuxt-link>
         <nuxt-link to="">Оплата та доставка</nuxt-link>
       </div>
-      <div class="links-wrapper items-center">
+      <div class="col-2">
         <nuxt-link to="">Поради покупцям</nuxt-link>
         <nuxt-link to="">Поради продавцям</nuxt-link>
         <nuxt-link to="">Служба підтримки</nuxt-link>
       </div>
-      <div class="links-wrapper items-end">
-        <nuxt-link to="">Політика конфіденційності</nuxt-link>
-        <nuxt-link to="">Правила користування</nuxt-link>
-        <nuxt-link to="">Локализация</nuxt-link>
+      <div class="col-3">
+        <nuxt-link to="">Про компанію</nuxt-link>
+        <nuxt-link to="">Часті питання</nuxt-link>
+        <nuxt-link to="">Оплата та доставка</nuxt-link>
       </div>
-    </nav>
+    </div>
   </footer>
 </template>
 <style lang="scss">
