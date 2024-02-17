@@ -3,5 +3,134 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
+  justify-content: center;
   background: #ffffff;
+  margin-bottom: 160px;
+  .login {
+    max-width: 432px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    .registration {
+      /* H2 Rb SBold 28 */
+      color: rgb(10, 10, 10);
+      font-family: Roboto;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 33px;
+      letter-spacing: 0.8px;
+      text-align: left;
+    }
+    .input-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      width: 100%;
+      .email {
+        padding: 8px 16px 8px 16px;
+        box-sizing: border-box;
+        border: 1px solid rgb(183, 145, 51);
+        border-radius: 1px;
+        width: 100%;
+        .email::placeholder {
+          /* T1 Rb Med 16 */
+          color: rgb(10, 10, 10);
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 19px;
+          letter-spacing: 4%;
+          text-align: left;
+        }
+      }
+      .emails-check {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: rgb(10, 10, 10);
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0%;
+        text-align: left;
+        .send-mails {
+          border-radius: 1px;
+          min-width: 28px;
+          height: 28px;
+          box-sizing: border-box;
+          box-sizing: border-box;
+          border: 1px solid rgb(183, 145, 51);
+          border-radius: 1px;
+        }
+      }
+    }
+    .call-to-action {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px 8px 16px;
+      border-radius: 1px;
+      box-shadow:
+        1px 1px 4px 0px rgba(183, 145, 51, 0.04),
+        -2px 6px 8px 0px rgba(183, 145, 51, 0.04),
+        0px 2px 24px 0px rgba(10, 10, 10, 0.04);
+      background: linear-gradient(
+        90deg,
+        rgb(183, 145, 51) 1.008%,
+        rgb(246, 195, 69) 16.514%,
+        rgb(255, 212, 84) 22.926%,
+        rgb(255, 213, 94) 28.832%,
+        rgb(255, 208, 72) 34.248%,
+        rgb(210, 171, 58) 50.329%,
+        rgb(191, 152, 36) 64.012%,
+        rgb(173, 134, 21) 72.44%,
+        rgb(169, 131, 22) 79.198%,
+        rgb(192, 144, 0) 85.858%,
+        rgb(242, 194, 50) 98.239%
+      );
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+      padding: 32px 0;
+      hr {
+        width: 30%;
+        height: 1px;
+        color: rgba(10, 10, 10, 0.4);
+      }
+      .divide-text {
+        color: rgba(10, 10, 10, 0.4);
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+    }
+    .social-login {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .facebook-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 200px;
+        padding: 8px 16px;
+        box-sizing: border-box;
+        border: 1px solid rgb(183, 145, 51);
+        border-radius: 1px;
+      }
+    }
+  }
 }
