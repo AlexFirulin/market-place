@@ -5,7 +5,7 @@
     <img src="/images/Logo.png" alt="logo">
   </div>
   <div class="menu">
-    <nuxt-link to="/login">
+    <nuxt-link to="/register">
       <img src="/images/button-login.png" alt="logo">
     </nuxt-link>
     <div class="social-icons"></div>

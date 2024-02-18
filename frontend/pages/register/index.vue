@@ -1,5 +1,6 @@
 <template>
   <div class="login-wrapper">
+    <the-breadcamp :links="links"/>
     <div class="login">
       <span class="registration">Реєстарція</span>
       <form class="input-form">
@@ -38,9 +39,19 @@
     </div>
   </div>
 </template>
-<script>
+<script setup>
+import TheBreadcamp from "../../components/TheBreadcamp.vue";
+
+const links = [{
+  label: 'Головна сторінка',
+  to: '/',
+  icon: '/icons/chevron.svg'
+}, {
+  label: 'Реєстрація',
+  to:'/login'
+}]
 </script>
 
 <style lang="scss">
-@use "~/assets/scss/pages/login-page.scss"
+@use "../assets/scss/pages/login-page.scss"
 </style>
