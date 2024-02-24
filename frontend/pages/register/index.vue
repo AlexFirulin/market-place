@@ -48,7 +48,7 @@ const links = [{
   icon: '/icons/chevron.svg'
 }, {
   label: 'Реєстрація',
-  to:'/login'
+  to:'/register'
 }]
 </script>
 
