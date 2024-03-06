@@ -30,20 +30,17 @@
       gap: 16px;
       width: 100%;
       .email {
-        padding: 8px 16px 8px 16px;
-        box-sizing: border-box;
-        border: 1px solid rgb(183, 145, 51);
+        border: 1px solid #b79133;
         border-radius: 1px;
-        width: 100%;
+        padding: 8px 16px;
+        width: 406px;
+        height: 48px;
         .email::placeholder {
-          /* T1 Rb Med 16 */
-          color: rgb(10, 10, 10);
-          font-family: Roboto;
-          font-size: 16px;
+          font-family: "Roboto", sans-serif;
           font-weight: 500;
-          line-height: 19px;
-          letter-spacing: 4%;
-          text-align: left;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          color: #0a0a0a;
         }
       }
       .emails-check {
