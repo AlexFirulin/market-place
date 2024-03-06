@@ -9,11 +9,27 @@ export const useAuth = () => {
         body: JSON.stringify(authData)
       });
       const {token} = await response.json();
-      sessionStorage.setItem('jwtToken', token);
+      localStorage.setItem('jwtToken', token);
 
     } catch (error) {
       console.error('Registration failed:', error);
     }
   }
-  return {register}
+  const login = async (authData) => {
+    try {
+      const response = await fetch('http://localhost:8080/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(authData)
+      });
+      const {token} = await response.json();
+      localStorage.setItem('jwtToken', token);
+
+    } catch (error) {
+      console.error('Registration failed:', error);
+    }
+  }
+  return {register, login}
 }
