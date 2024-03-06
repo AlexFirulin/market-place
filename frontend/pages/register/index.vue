@@ -1,11 +1,24 @@
 <template>
   <div class="login-wrapper">
-    <the-breadcamp :links="links"/>
+    <the-breadcamp :links="links" />
     <div class="login">
       <span class="registration">Реєстарція</span>
       <form class="input-form">
         <input type="email"
+               v-model="authData.email"
                placeholder="Email"
+               class="email">
+        <input type="email"
+               placeholder="Ім'я"
+               v-model="authData.name"
+               class="email">
+        <input placeholder="Пароль"
+               v-model="authData.password"
+               type="password"
+               class="email">
+        <input type="password"
+               v-model="authData.confirmPassword"
+               placeholder="Підтвендження паролю"
                class="email">
         <div class="emails-check">
           <input type="checkbox"
@@ -28,17 +41,20 @@
       </div>
       <div class="social-login">
         <button class="facebook-login">
-          <img src="/images/Socials-facebook.svg" alt="">
+          <img src="/images/Socials-facebook.svg"
+               alt="">
           <span>Facebook</span>
         </button>
         <button class="facebook-login">
-          <img src="/images/Socials-google.svg" alt="">
+          <img src="/images/Socials-google.svg"
+               alt="">
           <span>Facebook</span>
         </button>
       </div>
     </div>
   </div>
 </template>
+
 <script setup>
 import TheBreadcamp from "../../components/TheBreadcamp.vue";
 
@@ -48,8 +64,16 @@ const links = [{
   icon: '/icons/chevron.svg'
 }, {
   label: 'Реєстрація',
-  to:'/register'
+  to: '/register'
 }]
+const authData = ref(
+  {
+    email: '',
+    name: '',
+    password: '',
+    confirmPassword: ''
+  }
+)
 </script>
 
 <style lang="scss">
