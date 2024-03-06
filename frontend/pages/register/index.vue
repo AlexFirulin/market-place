@@ -3,22 +3,27 @@
     <the-breadcamp :links="links" />
     <div class="login">
       <span class="registration">Реєстарція</span>
-      <form class="input-form">
+      <form @submit.prevent="register"
+            class="input-form">
         <input type="email"
                v-model="authData.email"
                placeholder="Email"
+               autocomplete="email"
                class="email">
-        <input type="email"
+        <input type="text"
                placeholder="Ім'я"
+               autocomplete="username"
                v-model="authData.name"
                class="email">
         <input placeholder="Пароль"
                v-model="authData.password"
                type="password"
-               class="email">
+               class="email"
+               autocomplete="new-password">
         <input type="password"
                v-model="authData.confirmPassword"
                placeholder="Підтвендження паролю"
+               autocomplete="new-password"
                class="email">
         <div class="emails-check">
           <input type="checkbox"
@@ -32,8 +37,10 @@
                  class="send-mails">
           <label for="agree">Приймаю умови користування та політіку конфіденційності</label>
         </div>
+        <button type="submit"
+                class="call-to-action">Зареєструватись</button>
       </form>
-      <button class="call-to-action">Зареєструватись</button>
+
       <div class="divider">
         <hr>
         <span class="divide-text">або за допомогою</span>
@@ -74,6 +81,21 @@ const authData = ref(
     confirmPassword: ''
   }
 )
+const register = async () => {
+  try {
+    const response = await fetch('http://localhost:8080/api/auth/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(authData.value)
+    });
+    const responseData = await response.json();
+    console.log(responseData);
+  } catch (error) {
+    console.error('Registration failed:', error);
+  }
+}
 </script>
 
 <style lang="scss">
