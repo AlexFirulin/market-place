@@ -4,17 +4,15 @@ $primary: #0a0a0a;
   background: $primary;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0 24px;
   color: #fff;
   box-sizing: border-box;
   .logo-wrapper {
     display: flex;
     padding-block: 24px;
+    align-items: center;
     justify-content: space-between;
-    flex: 1;
-    width: 50%;
-    align-self: flex-end;
+    width: 100%;
     box-sizing: border-box;
     .logo {
       /* H2 BN Bold 48 */
@@ -35,7 +33,6 @@ $primary: #0a0a0a;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-fill-color: transparent;
       font-family: Bona Nova;
       font-size: 48px;
       font-weight: 700;

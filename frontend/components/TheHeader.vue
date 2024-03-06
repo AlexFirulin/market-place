@@ -1,13 +1,15 @@
 <template>
-<header class="header">
+<header class="header"
+:class="{ 'items-end': !auth}">
+  <div v-if="auth">
   <div class="logo-wrapper">
   <div class="logo">
     <img src="/images/Logo.png" alt="logo">
   </div>
   <div class="menu">
-    <nuxt-link to="/register">
+    <div @click="auth = false">
       <img src="/images/button-login.png" alt="logo">
-    </nuxt-link>
+    </div>
     <div class="social-icons"></div>
   </div>
 </div>
@@ -20,10 +22,15 @@
     <li><nuxt-link to="">Додадково</nuxt-link></li>
   </ul>
 </nav>
+</div>
+<div v-else>
+  <the-login-form />
+</div>
 </header>
 </template>
 
 <script setup>
+const auth = ref(true)
 </script>
 
 <style lang="scss">
