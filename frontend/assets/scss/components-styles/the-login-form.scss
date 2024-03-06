@@ -1,0 +1,60 @@
+.login-action {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 32px;
+  input {
+    border: 1px solid #b79133;
+    border-radius: 1px;
+    padding: 8px 16px;
+    width: 432px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 8px;
+    background: #0a0a0a;
+    ::placeholder {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      color: #fcfcfc;
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0px;
+    border-radius: 1px;
+    padding: 8px 16px;
+    width: 200px;
+    height: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #0a0a0a;
+    text-shadow:
+      0 0px 4px 0 rgba(255, 255, 255, 0.4),
+      0 0px 1px 0 rgba(255, 255, 255, 0.6);
+    background: linear-gradient(
+      90deg,
+      #b79133 0%,
+      #f6c345 15.95%,
+      #ffd454 22.54%,
+      #ffd55e 28.62%,
+      #ffd048 34.19%,
+      #d2ab3a 50.73%,
+      #bf9824 64.8%,
+      #ad8615 73.47%,
+      #a98316 80.42%,
+      #c09000 87.27%,
+      #f2c232 100%
+    );
+  }
+}
