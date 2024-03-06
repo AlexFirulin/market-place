@@ -1,9 +1,9 @@
 <template>
   <div class="login-wrapper">
     <the-breadcamp :links="links" />
-    <div class="login">
+    <div class="login"  v-if="!isAuth">
       <span class="registration">Реєстарція</span>
-      <form @submit.prevent="register"
+      <form @submit.prevent="register(authData )"
             class="input-form">
         <input type="email"
                v-model="authData.email"
@@ -64,7 +64,9 @@
 
 <script setup>
 import TheBreadcamp from "../../components/TheBreadcamp.vue";
+import { useAuth } from "~/composable/useAuth";
 
+const { register } = useAuth()
 const links = [{
   label: 'Головна сторінка',
   to: '/',
@@ -81,21 +83,7 @@ const authData = ref(
     confirmPassword: ''
   }
 )
-const register = async () => {
-  try {
-    const response = await fetch('http://localhost:8080/api/auth/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(authData.value)
-    });
-    const responseData = await response.json();
-    console.log(responseData);
-  } catch (error) {
-    console.error('Registration failed:', error);
-  }
-}
+let isAuth = ref(false)
 </script>
 
 <style lang="scss">
