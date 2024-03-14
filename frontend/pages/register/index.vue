@@ -12,14 +12,13 @@
           @submit.prevent="register(authData )"
         >
           <input
-            v-once
             v-model="authData.email"
             type="email"
             placeholder="Email"
             autocomplete="email"
             class="email"
-            :class="{'border-red-500 border-2':!validateEmail(authData.email)}"
-            @input.once="validateEmail(authData.email)"
+            :style="{'border': validateEmail(authData.email) ? '1px solid #b79133' : '2px solid red'}"
+            @input="handleInput"
           >
 
           <input
@@ -119,6 +118,9 @@ const authData = ref(
   }
 )
 const isAuth = ref(false)
+const handleInput = () => {
+      validateEmail(authData.email)
+    }
 </script>
 
 <style lang="scss">
