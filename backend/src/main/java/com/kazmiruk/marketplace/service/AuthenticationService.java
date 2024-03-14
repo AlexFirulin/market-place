@@ -32,8 +32,7 @@ public class AuthenticationService {
             throw new RuntimeException("User with this email already exists");
         }
         var user = User.builder()
-                .firstName(request.getFirstName())
-                .lastName(request.getLastName())
+                .name(request.getName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.BUYER)

@@ -1,45 +1,72 @@
 <template>
   <div class="login-wrapper">
     <the-breadcamp :links="links" />
-    <div class="login"  v-if="!isAuth">
+    <div
+      v-if="!isAuth"
+      class="login"
+    >
       <span class="registration">Реєстарція</span>
-      <form @submit.prevent="register(authData )"
-            class="input-form">
-        <input type="email"
-               v-model="authData.email"
-               placeholder="Email"
-               autocomplete="email"
-               class="email">
-        <input type="text"
-               placeholder="Ім'я"
-               autocomplete="username"
-               v-model="authData.name"
-               class="email">
-        <input placeholder="Пароль"
-               v-model="authData.password"
-               type="password"
-               class="email"
-               autocomplete="new-password">
-        <input type="password"
-               v-model="authData.confirmPassword"
-               placeholder="Підтвендження паролю"
-               autocomplete="new-password"
-               class="email">
-        <div class="emails-check">
-          <input type="checkbox"
-                 id="mailing"
-                 class="send-mails">
-          <label for="mailing">Надсилати мені електронні листи з новинами і новими товарами</label>
-        </div>
-        <div class="emails-check">
-          <input type="checkbox"
-                 id="agree"
-                 class="send-mails">
-          <label for="agree">Приймаю умови користування та політіку конфіденційності</label>
-        </div>
-        <button type="submit"
-                class="call-to-action">Зареєструватись</button>
-      </form>
+      <client-only>
+        <form
+          class="input-form"
+          @submit.prevent="register(authData )"
+        >
+          <input
+            v-model="authData.email"
+            type="email"
+            placeholder="Email"
+            autocomplete="email"
+            class="email"
+            :style="{'border': validateEmail(authData.email) ? '1px solid #b79133' : '2px solid red'}"
+            @input="handleInput"
+          >
+
+          <input
+            v-model="authData.name"
+            type="text"
+            placeholder="Ім'я"
+            autocomplete="username"
+            maxlength="15"
+            class="email"
+          >
+          <input
+            v-model="authData.password"
+            placeholder="Пароль"
+            type="password"
+            class="email"
+            autocomplete="new-password"
+          >
+          <input
+            v-model="authData.confirmPassword"
+            type="password"
+            placeholder="Підтвендження паролю"
+            autocomplete="new-password"
+            class="email"
+          >
+          <div class="emails-check">
+            <input
+              id="mailing"
+              type="checkbox"
+              class="send-mails"
+            >
+            <label for="mailing">Надсилати мені електронні листи з новинами і новими товарами</label>
+          </div>
+          <div class="emails-check">
+            <input
+              id="agree"
+              type="checkbox"
+              class="send-mails"
+            >
+            <label for="agree">Приймаю умови користування та політіку конфіденційності</label>
+          </div>
+          <button
+            type="submit"
+            class="call-to-action"
+          >
+            Зареєструватись
+          </button>
+        </form>
+      </client-only>
 
       <div class="divider">
         <hr>
@@ -48,13 +75,17 @@
       </div>
       <div class="social-login">
         <button class="facebook-login">
-          <img src="/images/Socials-facebook.svg"
-               alt="">
+          <img
+            src="/images/Socials-facebook.svg"
+            alt=""
+          >
           <span>Facebook</span>
         </button>
         <button class="facebook-login">
-          <img src="/images/Socials-google.svg"
-               alt="">
+          <img
+            src="/images/Socials-google.svg"
+            alt=""
+          >
           <span>Facebook</span>
         </button>
       </div>
@@ -65,6 +96,9 @@
 <script setup>
 import TheBreadcamp from "../../components/TheBreadcamp.vue";
 import { useAuth } from "~/composable/useAuth";
+import { useValidation } from "~/composable/useValidation";
+
+const { validateEmail } = useValidation()
 
 const { register } = useAuth()
 const links = [{
@@ -83,7 +117,10 @@ const authData = ref(
     confirmPassword: ''
   }
 )
-let isAuth = ref(false)
+const isAuth = ref(false)
+const handleInput = () => {
+      validateEmail(authData.email)
+    }
 </script>
 
 <style lang="scss">
